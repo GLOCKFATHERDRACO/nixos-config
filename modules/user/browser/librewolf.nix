@@ -12,8 +12,8 @@ in
       settings = import (data + "/prefs.nix");
     };
 
-    # -- policies: settings, bookmarks and extensions
-    policies = (import (data + "/settings.nix")) // {
+    # -- policies: bookmarks, extensions and search engines
+    policies = {
       Bookmarks = import (data + "/bookmarks.nix");
       ExtensionSettings = import (data + "/extensions.nix");
       SearchEngines = import (data + "/search.nix");
