@@ -9,7 +9,7 @@
 
     # -- hosts discovery
     # NOTE: "template" is a scaffold for new hosts and IT IS NOT DEPLOYABLE
-    hosts = builtins.filter (host: host != null && host != "template") (
+    hosts = builtins.filter (host: host != null) (
       lib.mapAttrsToList
       (name: type:
         if type == "directory"
