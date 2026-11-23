@@ -1,0 +1,16 @@
+{
+  lib,
+  pkgs,
+  system,
+  ...
+}: {
+  config = lib.mkIf system.security.gpg {
+    programs.gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      pinentryPackage = pkgs.pinentry-gnome3;
+    };
+
+    environment.systemPackages = [pkgs.gnupg];
+  };
+}
