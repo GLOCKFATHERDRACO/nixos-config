@@ -3,7 +3,9 @@
 Fresh install from the NixOS installer ISO
 
 ```
-sudo nix --extra-experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount --flake 'github:glockfatherdraco/nixos-config#host' && sudo nixos-install --flake 'github:glockfatherdraco/nixos-config#host'
+sudo nix --extra-experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount --flake 'github:glockfatherdraco/nixos-config#host' &&
+  sudo swapon /mnt/.swapvol/swapfile &&
+  sudo nixos-install --flake 'github:glockfatherdraco/nixos-config#host'
 ```
 
 # Re enrol keys into tpm

@@ -22,11 +22,7 @@
     };
   };
 
-  programs = {
-    nix-ld.enable = true;
-    nix-index.enable = true;
-  };
-
+  programs.nix-ld.enable = true;
   documentation.nixos.enable = false;
   system.stateVersion = stateVersion;
 }

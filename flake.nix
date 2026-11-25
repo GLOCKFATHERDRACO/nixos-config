@@ -8,8 +8,7 @@
     lib = nixpkgs.lib;
 
     # -- hosts discovery
-    # NOTE: "template" is a scaffold for new hosts and IT IS NOT DEPLOYABLE
-    hosts = builtins.filter (host: host != null && host != "template") (
+    hosts = builtins.filter (host: host != null) (
       lib.mapAttrsToList
       (name: type:
         if type == "directory"
@@ -23,7 +22,6 @@
       disko.nixosModules.disko
       lanzaboote.nixosModules.lanzaboote
       home-manager.nixosModules.home-manager
-      nix-index-database.nixosModules.default
     ];
 
     # -- home manager modules
@@ -95,11 +93,6 @@
     # -- user
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -47,6 +47,10 @@ in {
                 "/root" = subvolume "/";
                 "/nix" = subvolume "/nix";
                 "/home" = subvolume "/home";
+                "/swap" = {
+                  mountpoint = "/.swapvol";
+                  swap.swapfile.size = "8G";
+                };
               };
             };
           };
