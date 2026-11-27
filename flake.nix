@@ -19,6 +19,7 @@
 
     # -- modules
     nixosModules = with inputs; [
+      chaotic.nixosModules.nyx-overlay
       disko.nixosModules.disko
       lanzaboote.nixosModules.lanzaboote
       home-manager.nixosModules.home-manager
@@ -53,10 +54,7 @@
             {
               networking.hostName = hostname;
 
-              nixpkgs = {
-                hostPlatform = arch;
-                overlays = import ./nixos/overlays {inherit inputs;};
-              };
+              nixpkgs.hostPlatform = arch;
 
               home-manager = {
                 useGlobalPkgs = true;
@@ -108,15 +106,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mocktail = {
-      url = "github:komaruworld/mocktail";
+    quadra = {
+      url = "github:QuadraHQ/Quadra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # -- packages
-    nix-gaming-edge = {
-      url = "github:powerofthe69/nix-gaming-edge";
+    chaotic = {
+      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 }

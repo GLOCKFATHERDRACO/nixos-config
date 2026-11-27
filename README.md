@@ -53,7 +53,7 @@ A simple [NixOS](https://nixos.org/) configuration with [COSMIC](https://system7
 </details>
 
 <details>
-<summary><b>Why Mocktail?</b></summary>
+<summary><b>Why Quadra?</b></summary>
 
 > Sober sucks, and [Life is Roblox](https://youtu.be/0uC0XiXNs0s?si=kxVZ-nr6-txiuSg7)
 

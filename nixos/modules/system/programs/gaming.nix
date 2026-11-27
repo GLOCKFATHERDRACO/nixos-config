@@ -17,7 +17,7 @@
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
       protontricks.enable = true;
-      extraCompatPackages = [pkgs.proton-cachyos-x86_64-v3];
+      extraCompatPackages = [pkgs.proton-cachyos-bin_x86_64_v3];
     };
 
     environment.systemPackages = with pkgs; [
