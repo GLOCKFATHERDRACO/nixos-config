@@ -11,5 +11,6 @@
     cosmic-edit
     cosmic-reader
     cosmic-player
+    cosmic-term
   ];
 }

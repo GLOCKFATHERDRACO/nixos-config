@@ -174,7 +174,7 @@ format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
 # -- Prompt line break
 [line_break]
-disabled = false
+disabled = true
 
 # -- Prompt character
 [character]
