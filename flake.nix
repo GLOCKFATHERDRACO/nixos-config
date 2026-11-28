@@ -22,6 +22,7 @@
       chaotic.nixosModules.nyx-overlay
       disko.nixosModules.disko
       lanzaboote.nixosModules.lanzaboote
+      sops-nix.nixosModules.sops
       home-manager.nixosModules.home-manager
     ];
 
@@ -85,6 +86,11 @@
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
