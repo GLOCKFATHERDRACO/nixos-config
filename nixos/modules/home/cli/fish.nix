@@ -25,5 +25,4 @@
       off = "sudo poweroff";
     };
   };
-
 }
