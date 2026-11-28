@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+
+{
   programs.rbw.enable = true;
   home.packages = [pkgs.pinentry-gnome3];
   programs.fish.interactiveShellInit = ''
